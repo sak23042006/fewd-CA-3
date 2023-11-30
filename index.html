@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugoi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+        integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <div class="modal flex space-between">
+        <div class="heading-ingredient flex">
+            <h3 class="modal-header" >ingredient</h3>
+            <ul id="ing-list">
+                
+            </ul>
+            <img id="random-food-img" src="" alt="">
+        </div>
+        
+    </div>
+
+    <div class="main">
+        
+        
+
+        <div class="navbar flex space-between">
+            <div class="logo-img-container">
+                <img class="logo-img" src="./src/logo.png" alt="" />
+            </div>
+            <div class="nav-right space-between flex">
+                <div class="searchbar-container flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                    <input placeholder="search" class="search" type="search" name="" id="" />
+                </div>
+                <div class="home-button-container">
+                    <button id="home" class="home-button">home</button>
+                </div>
+                <div class="profile-container">
+                    <img class="profile" src="./src/profile.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="contents" class="contents">
+            <div class="intro-desc flex">
+                <div class="intro-image">
+                    <img src="./src/intro-pic.png" alt="" />
+                </div>
+                <div class="description">
+                    <p class="intro-text">
+                        Welcome to our global kitchen, where flavors know no borders!
+                        Explore a world of culinary delights on our food website,
+                        featuring an array of international dishes crafted to tantalize
+                        your taste buds. From the zesty spices of Mexican street food to
+                        the delicate artistry of Japanese sushi, our curated recipes
+                        promise a passport to diverse gastronomic experiences. Join us in
+                        this culinary adventure, where each dish tells a story of culture,
+                        tradition, and a shared love for exceptional food. Ignite your
+                        passion for cooking with our easy-to-follow recipes and embark on
+                        a journey that brings the world's finest flavors to your table.
+                        Bon appétit!
+                    </p>
+                </div>
+            </div>
+            <div class="total-random flex space-between">
+                <div class="total-dish flex space-between">
+                    <table>
+                        <tr>
+                            <td>veritable feast</td>
+                            <td id="feast">312</td>
+                        </tr>
+                        <tr>
+                            <td>Supplies & Spices</td>
+                            <td id="supplies">40</td>
+                        </tr>
+                    </table>
+                    <img src="./src/kabab.png" alt="" />
+                </div>
+                <div class="random-food"></div>
+            </div>
+            <div class="search-result-container">
+                <p id="search-result">
+                    Search result : <span id="num-of-res"></span>
+                </p>
+            </div>
+            <div id="sectionId" class="results grid"></div>
+            <p id="no-result"></p>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
