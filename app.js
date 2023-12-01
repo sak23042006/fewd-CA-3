@@ -5,6 +5,10 @@ document.getElementById("home").addEventListener("click",()=>
 {let targetSection = document.getElementById("contents");
 targetSection.scrollIntoView({ behavior: 'smooth' })})
 
+document.querySelector(".modal").addEventListener("click",()=>{
+    document.querySelector(".modal").style.display="none"
+})
+
 document.querySelector("input").addEventListener("keypress",(event)=>{
     console.clear();
     let search = document.querySelector(".search").value
@@ -83,17 +87,29 @@ async function filterDish(search) {
 }
 
 function modal() {
-    document.querySelector(".modal").style.display="block"
+    document.querySelector(".modal").style.display="flex"
     document.getElementById("ing-list").innerHTML =""
     let foods = localStorage.getItem("data")
     let food = JSON.parse(foods)
     // <button id="source">How to Cook</button>
-    document.querySelector("#random-food-img").src = `${food.strMealThumb}`
     // console.log(document.querySelector("#random-food-img"));
     // console.log(food.strYoutube);
     for (let i = 1; i < 21; i++) {
-        if(food[`strIngredient${i}`] != "" ){
+        // console.log(food);
+        // console.log(food[`strIngredient${i}`]);
+        if(food[`strIngredient${i}`]){
             document.getElementById("ing-list").innerHTML += `<li>${food[`strIngredient${i}`]}</li>` ;
         }
+        else{
+            break
+        }
     }
+    let content = document.querySelector("#contents")
+    window.onclick = function (event) {
+        console.log(event.target);
+        if(event.target == content ){
+            document.querySelector(".modal").style.display="none"
+        }
+      };
+    document.querySelector("#random-food-img").src = `${food.strMealThumb}`
 }

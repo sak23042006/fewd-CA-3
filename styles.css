@@ -42,7 +42,7 @@ body{
 }
 
 .nav-right{
-    width: 50%;
+    width: 55%;
     align-items: center;
 }
 
@@ -56,7 +56,7 @@ body{
 }
 
 .searchbar-container{
-    width: 300px;
+    width: 400px;
     height: 40px;
     align-items: center;
     background-color: white;
@@ -67,13 +67,14 @@ body{
 
 .search{
     outline: none;
-    width: 300px;
+    width: 400px;
     height: 40px;
     background-color: white;
     padding:  0 0 0 10px;
     border: none;
     border-radius: 10px;
-    font-weight: 900;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .home-button{
@@ -151,6 +152,7 @@ table{
 .random-dish-name{
     font-size: 20px;
     font-weight: 700;
+    width: 280px;
 }
 
 .total-random{
@@ -174,44 +176,42 @@ table{
 .modal{
     display: none;
     position: fixed;
-    width: 45%;
-    height: 36%;
+    width: 40%;
+    height: 40%;
     background-color: rgba(255, 198, 83, 0.964);
     border-radius: 20px;
-    margin: 30vh 35vw;
-    padding-left: 40px;
+    margin: 32vh 30vw;
     color: black;
 }
 
 #random-food-img{
-    width:300px ;
-    height:100% ;
+    width:50% ;
+    /* height:100% ; */
     border-radius: 0 20px 20px 0;
 }
 
 .modal-header{
-    width: 100px;
+    /* width: 100px; */
 }
 
 .heading-ingredient{
-    padding: 20px 0;
+    padding: 20px 0 20px 5%;
+    width: 50%;
     line-height: 27px;
-    max-height: 300px; /* Set the maximum height for the container */
     overflow-y: auto;
-    width: 150px;
 }
 
 .heading-ingredient::-webkit-scrollbar {
-    width: 12px; /* Set the width of the scrollbar */
+    width: 12px; 
 }
 
 .heading-ingredient::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0); /* Set the color of the scrollbar thumb */
-    border-radius: 6px; /* Set the radius of the scrollbar thumb */
+    background-color: rgb(0, 0, 0);
+    border-radius: 12px;
 }
 
 .heading-ingredient::-webkit-scrollbar-track {
-    background-color: #ffffff; /* Set the color of the scrollbar track */
+    background-color: #ffffff;
 }
 
 ::-webkit-scrollbar {
